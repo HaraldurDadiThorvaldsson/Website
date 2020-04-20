@@ -107,6 +107,21 @@ a:hover {
     border-radius: 25px;
 }
 
+.privacy-policy {
+    text-align: left;
+    width: 85%;
+    margin: auto;
+}
+
+.privacy-policy a {
+    display: inline-block;
+    padding: 0;
+}
+
+.section-title {
+    font-weight: bold;
+}
+
 /* Game section*/
 .game-icon {
     width: 128px;
@@ -135,6 +150,13 @@ a:hover {
 }
 
 @media (min-width: 600px) {
+    .name-box {
+        padding: 1.5em 0;
+    }
+    .name {
+	    font-size: 32px;
+    }
+
     .menuLabel {
         display: none;
     }
@@ -143,19 +165,21 @@ a:hover {
         bottom: initial;
     }
     ul {
-        width: 95%;
+        width: 75%;
         margin: 10px auto;
 
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1.5fr;
         grid-column-gap: 5px;
     }
     li {
         padding: 10px 0;
 
-        background-color: #262626;
-        border: 1px solid white;
-        border-radius: 25px;
+        background-color: none;
+        border: none;
+    }
+    li a {
+        text-decoration: underline;
     }
 
     .section {
@@ -173,8 +197,13 @@ a:hover {
 
 
 @media (min-width: 850px) {
+    .name {
+        line-height: 2em;
+	    font-size: 42px;
+    }
+
     ul {
-        width: 85%;
+        width: 65%;
         grid-column-gap: 25px;
     }
 
@@ -192,8 +221,14 @@ a:hover {
 }
 
 @media (min-width: 1100px) {
+    .name {
+	    font-size: 48px;
+    	animation: typing 8s steps(100, end) infinite alternate;
+    }
+
     ul {
-        width: 75%;
+        width: 45%;
+        grid-column-gap: 25px;
     }
 
     .section {
