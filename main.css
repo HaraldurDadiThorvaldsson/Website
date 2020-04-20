@@ -203,8 +203,7 @@ a:hover {
         padding: 10px 0;
     }
 
-    .game-description {
-        margin: auto;
-        width: 65%;
+    .section {
+        width: 30%;
     }
 }
