@@ -1,55 +1,9 @@
-@font-face {
-    font-family: 'icomoon';
-    src:  url('fonts/icomoon.eot?xk4etl');
-    src:  url('fonts/icomoon.eot?xk4etl#iefix') format('embedded-opentype'),
-      url('fonts/icomoon.ttf?xk4etl') format('truetype'),
-      url('fonts/icomoon.woff?xk4etl') format('woff'),
-      url('fonts/icomoon.svg?xk4etl#icomoon') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-  
-.icon {
-    /* use !important to prevent issues with browser extensions that change fonts */
-    font-family: 'icomoon' !important;
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1;
-  
-    /* Better Font Rendering =========== */
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
-
-.icon-menu:before {
-    content: "\e9bd";
-}
-.icon-home:before {
-    content: "\e901";
-}
-.icon-gamepad:before {
-    content: "\e900";
-}
-.icon-info:before {
-    content: "\ea0c";
-}
-.icon-question-circle-o:before {
-    content: "\e902";
-}
-.icon-appleinc:before {
-    content: "\eabe";
-}
-.icon-android:before {
-    content: "\eac0";
-}
-
 body {
 	font-family: arial;
 	background-color: #fffae6;
 	text-align: center;
     margin: 0;
+    padding-bottom: 2em;
 
     line-height: 1.5em;
 }
@@ -98,7 +52,7 @@ ul {
 
     transition: all .75s ease;
 }
-.menuInput:checked ~ nav {
+.menuInput:checked ~ .nav-columns {
 	bottom: 3.5em;
 }
 li {
@@ -159,6 +113,9 @@ a:hover {
     border-radius: 25px;
 }
 .game-description {
+    margin: auto;
+    width: 85%;
+
     text-align: left;
     text-shadow:
         1px 1px 0 black,
@@ -170,10 +127,70 @@ a:hover {
     width: 85%;
 }
 
-@media (min-width: 650px) {
+@media (min-width: 600px) {
+    .menuLabel {
+        display: none;
+    }
+    .nav-columns {
+        position: initial;
+        bottom: initial;
+    }
+    ul {
+        margin: 1em;
 
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-column-gap: 5px;
+    }
+    li {
+        background-color: #262626;
+        border: 1px solid white;
+        border-radius: 25px;
+    }
+
+    .section {
+        width: 65%;
+    }
+
+    .game-icon {
+        width: 196px;
+        border-radius: 25px;
+    }
+    .game-download {
+        width: 50%;
+    }
 }
 
-@media (min-width: 1050px) {
+@media (min-width: 850px) {
+    ul {
+        margin: 1em 2em;
+        grid-column-gap: 25px;
+    }
+    li {
+        padding: 10px 0;
+    }
 
+    .game-icon {
+        width: 256px;
+        border-radius: 25px;
+    }
+}
+
+@media (min-width: 1100px) {
+    ul {
+        margin: 1em 2em;
+        grid-column-gap: 25px;
+    }
+    li {
+        padding: 10px 0;
+    }
+
+    .section {
+        width: 50%;
+    }
+
+    .game-description {
+        margin: auto;
+        width: 75%;
+    }
 }
