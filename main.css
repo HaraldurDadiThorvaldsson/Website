@@ -35,7 +35,7 @@ ul {
 }
 .nav-columns {
     display: block;
-	background-color:#fffae6;
+    background-color:#fffae6;
 
     position: fixed;
     bottom: -10em;
@@ -53,11 +53,11 @@ ul {
     transition: all .75s ease;
 }
 .menuInput:checked ~ .nav-columns {
-	bottom: 3.5em;
+    bottom: 3.3em;
 }
 li {
-	border: 5px solid black;
-	border-width: 5px 0 0 0;
+    border: 5px solid black;
+    border-width: 5px 0 0 0;
 }
 li a {
     text-decoration: none;
@@ -96,15 +96,25 @@ a:hover {
 }
 
 /* Sections */
+.social-bar {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.social-bar a {
+    display: block;
+    text-align: center;
+    padding: 16px;
+    transition: all 0.3s ease;
+    font-size: 32px;
+}
+
 .section {
-    padding: 1em 0;
     margin: auto;
-    width: 75%;
-    
-    background-color: #262626;
-    color: white;
-    padding: 1em;
-    border-radius: 25px;
+    width: 85%;
+}
+
+.section a {
+    padding: 0;
 }
 
 .privacy-policy {
@@ -118,14 +128,25 @@ a:hover {
     padding: 0;
 }
 
-.section-title {
-    font-weight: bold;
-}
-
 /* Game section*/
+.game-section {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 2em;
+}
+.game {
+    padding: 2em 1em;
+    background-color: #1f1f1f;
+    border-radius: 25px;
+}
 .game-icon {
     width: 128px;
     border-radius: 25px;
+}
+.game-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
 }
 .game-description {
     margin: auto;
@@ -133,17 +154,25 @@ a:hover {
     padding: 10px;
 
     text-align: left;
-    text-shadow:
-        1px 1px 0 black,
-        -1px -1px 0 black,  
-        1px -1px 0 black,
-        -1px 1px 0 black
+    color: white;
+}
+.download-links {
+    width: 75%;
+    margin: auto;
 }
 .game-download {
-    width: 85%;
+    width: 100%;
 }
 
 @media (min-width: 500px) {
+    .download-links {
+        width: 100%;
+        margin: auto;
+        margin-top: 1em;
+
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
     .game-download {
         width: 75%;
     }
@@ -154,7 +183,25 @@ a:hover {
         padding: 1.5em 0;
     }
     .name {
-	    font-size: 32px;
+        font-size: 32px;
+    }
+
+    .social-bar {
+        display: initial;
+        position: fixed;
+        left: 0;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+      }
+      
+    .social-bar a {
+        display: block;
+        text-align: center;
+        padding: 16px;
+        transition: all 0.3s ease;
+        font-size: 20px;
     }
 
     .menuLabel {
@@ -183,15 +230,12 @@ a:hover {
     }
 
     .section {
-        width: 65%;
+        width: 75%;
     }
 
     .game-icon {
         width: 156px;
         border-radius: 25px;
-    }
-    .game-download {
-        width: 60%;
     }
 }
 
@@ -207,16 +251,16 @@ a:hover {
         grid-column-gap: 25px;
     }
 
-    .section {
-        width: 50%;
+    .game-section {
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 2em;
     }
-
     .game-description {
         margin: auto;
         width: 75%;
     }
     .game-download {
-        width: 50%;
+        width: 95%;
     }
 }
 
@@ -230,8 +274,8 @@ a:hover {
         width: 45%;
         grid-column-gap: 25px;
     }
-
+    
     .section {
-        width: 30%;
+        width: 65%;
     }
 }
