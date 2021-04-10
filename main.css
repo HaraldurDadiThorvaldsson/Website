@@ -98,7 +98,9 @@ a:hover {
 /* Sections */
 .social-bar {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 50%;
+    margin: auto;
 }
 .social-bar a {
     display: block;
@@ -191,6 +193,8 @@ a:hover {
         position: fixed;
         left: 0;
         top: 50%;
+        width: auto;
+        margin: 0;
         -webkit-transform: translateY(-50%);
         -ms-transform: translateY(-50%);
         transform: translateY(-50%);
@@ -276,6 +280,9 @@ a:hover {
     }
     
     .section {
-        width: 65%;
+        width: 85%;
+    }
+    .game-section {
+        grid-template-columns: 1fr 1fr 1fr;
     }
 }
